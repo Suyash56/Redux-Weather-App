@@ -1,0 +1,66 @@
+.about {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+
+.closeSideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.openSideNav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.openSideNav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openSideNav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.openSideNav a:hover {
+  color: #f1f1f1;
+}
+
+.openSideNav p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  color: white;
+}
+
+.openSideNav h1 {
+  color: white;
+  margin-left: 20px;
+}

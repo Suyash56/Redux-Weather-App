@@ -21,8 +21,6 @@ export default function Main() {
 
   const weatherInfo = useSelector((state) => state.weatherInfo);
 
-  console.log(weatherInfo.weatherData);
-
   const Logout = () => {
     dispatch(resetWeather());
     dispatch(logout(false));
@@ -32,6 +30,7 @@ export default function Main() {
   };
 
   const handleSelect = (e) => {
+    //dispatch({ type: "LOAD_WEATHER_LOADING" });
     dispatch({ type: "FETCH_WEATHER", payload: e.target.value });
   };
 
@@ -62,10 +61,12 @@ export default function Main() {
       <div className="main_container">
         <div className="main_container_weather">
           <h2>Current Weather Data</h2>
+          {weatherInfo.loading && <h2>Loading</h2>}
           {weatherInfo.weatherData.length !== 0 && <CurrentWeather />}
         </div>
         <div className="main_container_5dayWeather">
           <h2>5 Days Weather Forcast</h2>
+          {weatherInfo.loading && <h2>Loading</h2>}
           {weatherInfo.weatherData.length !== 0 && <FivedaysWeather />}
         </div>
       </div>

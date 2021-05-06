@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import "../css/fivedayweather.css";
 
 export default function FivedaysWeather() {
-  const { weatherData, loading } = useSelector((state) => state.weatherInfo);
+  const { weatherData } = useSelector((state) => state.weatherInfo);
   const fivedaysData = [];
   if (weatherData && weatherData.list !== undefined) {
     const data_time = weatherData.list[0].dt_txt;

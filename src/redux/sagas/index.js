@@ -1,13 +1,5 @@
-import {
-  all,
-  put,
-  call,
-  take,
-  fork,
-  takeLatest,
-  takeEvery,
-} from "redux-saga/effects";
-import getWeatherData from "../../services/weatherapp.service";
+import { all, put, call, take, fork, takeLatest } from "redux-saga/effects";
+import getWeatherData from "../../services/Weatherapp.service";
 import {
   loadWeatherSuccess,
   loadWeatherError,
